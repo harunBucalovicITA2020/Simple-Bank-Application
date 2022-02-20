@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 12, 2022 8:33:15 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="bank.entity.BankAccount" table="bank_account" catalog="banka" optimistic-lock="version">
+        <id name="accountNumber" type="string">
+            <column name="account_number" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="amount" type="big_decimal">
+            <column name="amount" precision="6" />
+        </property>
+    </class>
+</hibernate-mapping>
